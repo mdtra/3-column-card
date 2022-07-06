@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --font-main: 'Lexend Deca', sans-serif;
+    --font-h2: 'Big Shoulders Display', sans-serif;
+    --color-bg-main: hsl(0, 0%, 95%);
+    --color-bg-1: hsl(31, 77%, 52%);
+    --color-bg-2: hsl(184, 100%, 22%);
+    --color-bg-3: hsl(179, 100%, 13%);
+    --color-h2: hsl(0, 0%, 95%);
+    --color-p: hsla(0, 0%, 100%, 0.75);
+    --color-button: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 15px;
+    background-color: var(--color-bg-main);
+}
+
+.card {
+    margin: auto;
+    margin-top: 12%;
+    max-width: 900px;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-column {
+    flex: 1 1;
+    padding: 48px;
+}
+
+.card-column-1 {
+    background-color: var(--color-bg-1);
+}
+
+.card-column-2 {
+    background-color: var(--color-bg-2);
+}
+
+.card-column-3 {
+    background-color: var(--color-bg-3);
+}
+
+.card-column > h2 {
+    margin-top: 30px ;
+    font-family: var(--font-h2);
+    font-size: 38px;
+    color: var(--color-h2);
+    text-transform: uppercase;
+}
+
+.card-column > p {
+    margin-top: 30px ;
+    font-size: 14px;
+
+    color: var(--color-p);
+    line-height: 25px;
+}
+
+.card-column > button {
+    margin-top: 80px ;
+    width: 140px;
+    height: 45px;
+    font-family: var(--font-main);
+    font-size: 15px;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--color-button);
+}
+
+.card-column > button:hover {
+    cursor: pointer;
+    background: none;
+    color: var(--color-p);
+    border: 3px solid var(--color-p);
+    transition: 0.3s;
+}
+
+.card-column-1 > button {
+    color: var(--color-bg-1);
+}
+
+.card-column-2 > button {
+    color: var(--color-bg-2);
+}
+
+.card-column-3 > button {
+    color: var(--color-bg-3);
+}
+
+@media (max-width: 375px) {
+    .card {
+        margin-top: 24%;
+        max-width: 320px;
+    }
+
+    .card-column > button {
+        margin-top: 25px;
+    }
+}
